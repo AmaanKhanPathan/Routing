@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-sm-4">    
+    <li class="list-group-item"
+    [routerLink]="['/users', user.id]"
+    [ngClass]="{active : selectedUser.id === user.id}"
+    *ngFor="let user of usersInfo">
+        {{user.username}}
+    </li>
+</div>
+    <!-- {{usersInfo | json}} -->
+    <div class="col-sm-8">
+        <!-- <app-user></app-user> -->
+    </div>
+</div>
+
+<!-- {{selectedUserId | json}} -->
+<!-- {{selectedUser | json}} -->

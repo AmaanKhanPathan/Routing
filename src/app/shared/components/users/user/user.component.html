@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="card-body">
+        <p>The username is <strong> {{userObject.username}}</strong></p>
+        <p>UserId of this user is <strong>{{userObject.id}}</strong> </p>
+        <hr>
+        <button class="btn btn-primary" 
+        [routerLink]="['/users', userObject.id, 'edit']"        
+        >Edit User</button>
+    </div>
+</div>
+
+<!-- <a href="javascript:;" [routerLink]="['/users', 3]">Load Ruby</a> -->

@@ -1,0 +1,18 @@
+
+<div class="form-group">
+    <label for="pname">Product Name</label>
+    <input type="text" [disabled]="!canEdit" #pname class="form-control" [value]="selectedProduct.pname" id="pname">
+</div>
+<div class="form-group">
+    <label for="pstatus">Product Status</label>
+    <select name="" id="" #pstatus [disabled]="!canEdit" [value]="selectedProduct.pstatus" class="form-control">
+        <option value="In-Progress">In-Progress</option>
+        <option value="Delivered">Delivered</option>
+        <option value="Dispatched">Dispatched</option>
+    </select>
+</div>
+<div class="text-right">
+    <button class="btn btn-primary" [disabled]="!canEdit"
+    (click)="onProductUpdate(pname, pstatus)">Update Product</button>
+</div>
+

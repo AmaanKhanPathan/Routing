@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="list-group">
+                    <li class="list-group-item"
+                    [routerLink]="['/products', prod.pid]"
+                    [queryParams]="{canEdit : prod.canReturn}"
+                     *ngFor="let prod of productsInfo"
+                     [class.active] = "prod.pid === selectedProduct.pid">
+                        {{prod.pname}}
+                    </li> 
+                </ul>
+            </div>
+            <div class="col-md-8">
+                <!-- <app-product></app-product> -->
+            </div>
+        </div>
+        <hr>
+        <button class="btn btn-primary" (click)="onUserClick()">Go To Users</button>
+        
+        <!-- {{productsInfo | json}} -->
+        <!-- {{selectedProductId | json}} -->
+        <!-- {{selectedProduct | json}} -->
+    </div>
+</div>

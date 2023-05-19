@@ -1,0 +1,9 @@
+<div class="form-group">
+    <label for="username">User Name</label>
+    <input type="text" #username class="form-control" [value]="selectedUser.username" id="username">
+</div>
+
+<div class="text-right">
+    <button class="btn btn-primary" (click)="onUserUpdate(username)">Update User</button>
+</div>
+
